@@ -1,15 +1,31 @@
 import { Header } from "@/components/Header/Index";
+import { ValuesCard } from "@/components/ValuesCard";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    <Header/>
-    <div className="mx-auto max-w-[1120px]">
-      <div className="px-8 py-5 bg-white w-[352px] h-[136px] rounded-md transform -translate-y-1/2">
-          <h3>Entradas</h3>
+      <Header />
+      <div className="mx-auto max-w-[1120px] flex justify-between">
+        <ValuesCard
+          title="Entradas"
+          iconUrl="/images/income.png"
+          value={17400}
+          color="white"
+        />
+        <ValuesCard
+          title="Saídas"
+          iconUrl="/images/outcome.png"
+          value={1259}
+          color="white"
+        />
+        <ValuesCard
+          title="Total"
+          iconUrl="/images/total.png"
+          value={16141}
+          color="income"
+        />
       </div>
-    </div>
     </>
-    
   );
 }
