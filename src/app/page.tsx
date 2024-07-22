@@ -1,3 +1,4 @@
+import { AddTransactionModal } from "@/components/AddTransactionModal";
 import { Header } from "@/components/Header/Index";
 import { List } from "@/components/List";
 import { ValuesCard } from "@/components/ValuesCard";
@@ -7,6 +8,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+      <AddTransactionModal />
       <Header />
       <div className="mx-auto max-w-[1120px]">
         <ValuesCardGroup />
