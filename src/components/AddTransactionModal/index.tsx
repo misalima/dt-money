@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Input from "../FormControl/Input";
+import EntryRadioSelects from "../FormControl/EntryRadioSelects";
 
 interface ModalProps {
   isOpen: boolean
@@ -35,70 +37,13 @@ export function AddTransactionModal({isOpen, setIsOpen}: ModalProps) {
           </h3>
           {/*Form group*/}
           <form action="submit">
-            <input
-              className="border-2 border-[#d7d7d7] outline-1 outline-table-header text-base w-full h-16 my-3 bg-[#e7e9ee] px-5 rounded-md"
-              name="nome"
-              type="text"
-              placeholder="Nome"
-            />
-            <input
-              className="border-2 border-[#d7d7d7] outline-1 outline-table-header text-base w-full h-16 my-3 bg-[#e7e9ee] px-5 rounded-md"
-              type="number"
-              min="0.00"
-              max="10000.00"
-              step="0.01"
-              placeholder="Preço"
-            />
+            <Input name="nome" type="text" placeholder="Nome" />
+            <Input name="preco" type="number" placeholder="Preço" />
             {/*Radio button group*/}
-            <div className="flex gap-2 my-3">
-              <label
-                htmlFor="entrada"
-                className="cursor-pointer flex justify-center items-center gap-2 w-1/2 h-16 rounded-md border-2 border-[#d7d7d7]"
-              >
-                <Image
-                  className="max-h-8"
-                  width={24}
-                  height={24}
-                  src="/images/income.png"
-                  alt="income"
-                ></Image>
-                Entrada
-              </label>
-              <input
-                className="hidden"
-                type="radio"
-                name="tipo"
-                id="entrada"
-                checked
-              />
-              <label
-                htmlFor="saida"
-                className="cursor-pointer flex justify-center items-center gap-2 w-1/2 h-16 rounded-md border-2 border-[#d7d7d7]"
-              >
-                <Image
-                  className="max-h-8"
-                  width={24}
-                  height={24}
-                  src="/images/outcome.png"
-                  alt="income"
-                ></Image>
-                Saída
-              </label>
-              <input
-                className="hidden"
-                type="radio"
-                name="tipo"
-                id="saida"
-                checked
-              />
-            </div>
-            
-            <input
-              className="border-2 border-[#d7d7d7] outline-1 outline-table-header text-base w-full h-16 my-3 bg-[#e7e9ee] px-5 rounded-md"
-              type="text"
-              placeholder="Categoria"
-            />
-            
+            <EntryRadioSelects />
+
+            <Input name="categoria" type="text" placeholder="Categoria" />
+
             <button
               type="submit"
               className="bg-income w-full h-16 text-white font-semibold text-base rounded-md my-3"
