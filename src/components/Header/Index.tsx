@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { AddTransactionModal } from "../AddTransactionModal";
 import { useState } from "react";

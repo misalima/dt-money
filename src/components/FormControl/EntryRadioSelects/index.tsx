@@ -12,7 +12,7 @@ export default function EntryRadioSelects() {
       <label
         htmlFor="entrada"
         className={`${
-          optionChecked == 0 ? "bg-green-300 text-title" : ""
+          optionChecked == 0 ? "bg-green-100 text-green-900" : ""
         } cursor-pointer flex justify-center items-center gap-2 w-1/2 h-16 rounded-md border-2 border-[#d7d7d7]`}
       >
         <Image
@@ -34,7 +34,7 @@ export default function EntryRadioSelects() {
       <label
         htmlFor="saida"
         className={`${
-          optionChecked == 1 ? "bg-red-300 text-title" : ""
+          optionChecked == 1 ? "bg-red-100 text-red-900" : ""
         } cursor-pointer flex justify-center items-center gap-2 w-1/2 h-16 rounded-md border-2 border-[#d7d7d7]`}
       >
         <Image
